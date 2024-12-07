@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgriSolutionsPakistan - Empowering Farmers, Nurturing Growth</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/HomePage.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet" />
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLR6DQ8C/AFQ1Ic+kp0k5xKPtsG9NKOWI4Q1Hg6P4" crossorigin="anonymous"></script>
+
+
+  </head>
+
+
+  <body class="bg-gray-200">
+  <?php
+    session_start();
+    if (isset($_SESSION['name'])) {
+        echo "<div id='welcomeMessage' class='welcome-message text-center text-6xl text-green-700 font-bolder mt-96 mb-96'>Welcome, " . htmlspecialchars($_SESSION['name']) . "!</div>";
+    }
+    ?>
+
+
+    <div class="h-screen bg-cover bg-fixed bg-center bg-no-repeat shadow-lg rounded-2xl"
+      style="background-image: url('images/pexels-pixabay-289334.jpg');">
+
+      <div class="header text-white shadow-lg">
+        <div
+          class=" navbar bg-green-700  mx-auto flex items-center justify-between py-4">
+          <div class="flex items-center ml-3 ">
+            <img src="images/logo.jpeg" alt="logo"
+              class="h-10 w-10 mr-2 rounded-full" />
+            <h1 class="font-bold text-2xl">AgriSolutionsPakistan</h1>
+          </div>
+          <!-- Hamburger menu icon -->
+          <button class="md:hidden" onclick="toggleMenu()">
+            <svg
+              class="hamburger w-7 h-7 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+          <!-- Navbar Links -->
+          <ul class="menu hidden md:flex items-center space-x-6">
+            <li><a href="HomePage.php">Home</a></li>
+            <li><a href="ResorcesPage.html">Resources</a></li>            
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="contectUs.html">Contact</a></li>
+            
+             <button id="dropdownAvatarNameButton" data-dropdown-toggle="dropdownAvatarName" class="text-white flex items-center  rounded-full hover:text-green-600 md:me-0 focus:ring-gray-100 mr4  " type="button">
+              <img class="w-10 h-10 m-1 rounded-full" src="images/rana.jpeg" alt="user photo">
+              <svg class="w-2.5 h-2.5 ms-3 mr-4 ml-2 mt-1 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+              </svg>
+              </button>
+              
+              <!-- Dropdown menu -->
+              <div id="dropdownAvatarName" class="dropdown-item z-10 w-44 p-6  bg-green-700  divide-y divide-gray-100 rounded-lg hidden  dark:bg-gray-700 dark:divide-gray-600">
+                  <div class=" py-3 text-sm text-black ">
+                    <div class="font-medium ">Rana Mudassir Ali</div>
+                    <div class="truncate">ranamudassirali9@gmail.com</div>
+                  </div>
+                  <ul class="text-sm" >
+                    <li>
+                      <a href="#" class="block ">Dashboard</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block">Settings</a>
+                    </li>
+                    <li>
+                      <a href="Get_involved" class="block">Get Involved</a>
+                    </li>
+                  </ul>
+                  <div class="py-2">
+                    <a href="loginPage.html" class="flex pl-4 py-2  text-sm text-black rounded-2xl hover:bg-green-700 hover:text-white font-bold ">Sign out</a>        
+                  </div>
+              </div>
+         </ul>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="manu hidden md:hidden bg-green-700 text-white">
+        <ul class="mobile">
+            <li><a href="HomePage.php" class="block px-4 py-2 ml-4">Home</a></li>
+            <li>
+              <a href="ResorcesPage.html">Resources</a>
+            </li>
+            <li><a href="AboutUs.html" class="block px-4 py-2 ml-4">About Us</a></li>
+            <li><a href="contectUs.html" class="block px-4 py-2 ml-4">Contact</a></li>
+           <li>
+            <a href="loginPage.html" class="block px-4 py-2">
+              <button
+            class="w-full bg-gray-200 text-green-700 py-2 rounded-full hover:bg-green-600 hover:text-white">
+            Join Us
+          </button>
+           </li> 
+          </a>       
+          </ul>
+      </div>
+
+      <div class="container mx-auto py-52 text-center">
+        <h1 class="text-4xl font-bold mb-5 text-green-900">
+          Welcome to AgriSolutionsPakistan
+        </h1>
+        <p class="text-green-900 mb-6 text-xl ">Empowering Farmers, Nurturing
+          Growth</p>
+        
+      </div>
+
+      
+          <div class="container text-center mx-auto lg:-mt-40 md:mt-96 ">
+              <div class="container text-center lg:py-12 md:py-8 bg-white rounded-xl mt-40 mr-10">
+                  <h2 class="text-3xl font-bold mb-4">About Us</h2>
+                  <p class="text-xl text-gray-700 mb-5 p-8">AgriSolutions Pakistan is a pioneering initiative aimed at revolutionizing the agricultural landscape of Pakistan. It is a leading organization dedicated to advancing agriculture and empowering farmers across Pakistan.</p>
+              </div>
+          </div>
+      </div>
+    </div>
+  </section>
+    
+    <section class="bg-gray-100 py-14 mx-8 rounded-2xl mt-12 lg:mt-48">
+      <div class="container mx-auto text-center">   
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- Overview Card -->
+          <div class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
+            <i class="fas fa-info-circle fa-3x text-green-700 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2 text-gray-800">Overview</h3>
+            <p class="text-gray-700 leading-relaxed">
+              AgriSolutions Pakistan is a pioneering initiative aimed at revolutionizing the agricultural landscape of Pakistan. 
+              Established in [year], we are dedicated to empowering farmers, enhancing agricultural productivity, 
+              and fostering sustainable growth in the agricultural sector.
+            </p>
+          </div>
+          <!-- Mission Card -->
+          <div class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
+            <i class="fas fa-bullseye fa-3x text-green-700 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2 text-gray-800">Our Mission</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Our mission is to provide comprehensive support, innovative solutions, and cutting-edge technologies 
+              to Pakistani farmers, enabling them to achieve higher yields, improve livelihoods, and contribute 
+              to national food security.
+            </p>
+          </div>
+          <!-- Vision Card -->
+          <div class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
+            <i class="fas fa-binoculars fa-3x text-green-700 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2 text-gray-800">Our Vision</h3>
+            <p class="text-gray-700 leading-relaxed">
+              We envision a future where every farmer in Pakistan has access to modern agricultural practices, 
+              advanced technologies, and market opportunities, leading to a prosperous and resilient 
+              agricultural sector.
+            </p>
+          </div>
+          <!-- Values Card -->
+          <div class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
+            <i class="fas fa-heart fa-3x text-green-700 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2 text-gray-800">Our Values</h3>
+            <p class="text-gray-700 leading-relaxed">
+              We believe in empowering farmers through knowledge, resources, and opportunities. 
+              We strive for continuous innovation to address the evolving challenges and needs 
+              of the agricultural community. We are committed to promoting sustainable farming 
+              practices that preserve natural resources and protect the environment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="bg-gray-100 py-14 mx-8 rounded-2xl mt-16">
+      <div class="container mx-auto text-center">   
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center">            <i class="fas fa-history fa-3x text-green-700"></i>
+            <h2 class="text-2xl font-bold mb-5">Brief History</h2>
+            <p class="text-gray-700 leading-relaxed">
+              AgriSolutions Pakistan was founded by a team of passionate individuals with diverse backgrounds in agriculture, technology, and business.
+              Since our inception, we have been working tirelessly to bridge the gap between traditional farming practices and modern agricultural advancements.
+              Over the years, we have successfully implemented various projects, initiatives, and partnerships to uplift farmers and promote agricultural development nationwide.
+            </p>
+          </div>
+          <div class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
+            <i class="fas fa-trophy fa-3x text-green-700 mb-4"></i>
+            <h2 class="text-2xl font-bold mb-4">Achievements</h2>
+            <ul class="list-disc list-inside text-gray-700 pl-4">
+              <li class="mb-2">
+                Impactful Projects: [Highlight some of the significant projects or initiatives undertaken by AgriSolutions Pakistan and their outcomes.]
+              </li>
+              <li class="mb-2">
+                Recognition & Awards: [Mention any awards, accolades, or recognition received by the organization for its contributions to agriculture.]
+              </li>
+              <li class="mb-2">
+                Testimonials: [Include testimonials from farmers, partners, or stakeholders who have benefited from the services or support provided by AgriSolutions Pakistan.]
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  <button onclick="scrollToTop()" id="scrollToTopBtn"
+    title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+
+  
+      <!-- Team Members Section -->
+      <section class="container mx-auto text-center py-10  rounded-2xl mt-10 ">
+        <div class="container mx-auto text-center px-6 bg-gray-100 ">
+          <h2 class="text-3xl font-bold  py-8  ">Our Team</h2>
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-10 ">
+            <!-- Team Member Card -->
+            <div class="card bg-white rounded-2xl max-w-sm ">
+              <figure>
+                <img src="images/sultan.jpg" alt="Mohsin"
+                  class="rounded-full w-40 h-40 object-cover justify-center mx-auto mt-8">
+              </figure>
+              <h3 class="text-xl font-semibold mb-4 mt-8">Mohsin Haider</h3>
+              <p class="text-gray-700 mb-10">Team Leader</p>
+              <a href="#"
+                class="bg-gray-100 inline-flex text-green-700 py-2 px-6 rounded-full hover:bg-green-600 hover:text-white">
+                Read more
+              </a>
+              <ul
+                class="flex flex-wrap justify-center mx-auto flex-row my-6">
+
+                <li class="mb-2 lg:mb-0">
+                  <a href="#" class="text-green-600 hover:text-gray-300 px-3"><i
+                      class="fab fa-facebook-f"></i></a>
+                </li>
+                <li class="mb-2 lg:mb-0">
+                  <a href="#" class="text-green-600 hover:text-gray-300 px-3"><i
+                      class="fab fa-twitter"></i></a>
+                </li>
+                <li class="mb-2 lg:mb-0">
+                  <a href="#" class="text-green-600 hover:text-gray-300 px-3"><i
+                      class="fab fa-instagram"></i></a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Team Member Card -->
+            <div class="card bg-white rounded-2xl max-w-sm ">
+             
+              <figure>
+                <img src="images/rana.jpeg" alt="rana"
+                  class="rounded-full w-40 h-40 object-cover justify-center mx-auto mt-10">
+              </figure>
+              <h3 class="text-xl font-semibold mb-4 mt-10">Rana Mudassir Ali</h3>
+              <p class="text-gray-700 mb-10">co-Founder</p>
+              <a href="#"
+                class="bg-gray-100 inline-flex text-green-700 py-2 px-6 rounded-full hover:bg-green-600 hover:text-white">
+                Read more
+              </a>
+              <ul
+                class="flex flex-wrap justify-center mx-auto flex-row my-6">
+
+                <li class="mb-2 lg:mb-0">
+                  <a href="#" class="text-green-600 hover:text-gray-300 px-3"><i
+                      class="fab fa-facebook-f"></i></a>
+                </li>
+                <li class="mb-2 lg:mb-0">
+                  <a href="#" class="text-green-600 hover:text-gray-300 px-3"><i
+                      class="fab fa-twitter"></i></a>
+                </li>
+                <li class="mb-2 lg:mb-0">
+                  <a href="#" class="text-green-600 hover:text-gray-300 px-3"><i
+                      class="fab fa-instagram"></i></a>
+                </li>
+              </ul>
+            </div>
+            <!-- Team Member Card -->
+            <div class="card bg-white rounded-2xl max-w-sm ">
+              <figure>
+                <img src="images/shohaib.jpeg" alt="rana"
+                  class="rounded-full w-40 h-40 object-cover justify-center mx-auto mt-10">
+              </figure>
+              <h3 class="text-xl font-semibold mb-4 mt-10">Syed M.Shohaib</h3>
+              <p class="text-gray-700 mb-10">VP</p>
+              <a href="#"
+                class="bg-gray-100 inline-flex text-green-700 py-2 px-6 rounded-full hover:bg-green-600 hover:text-white">
+                Read more
+              </a>
+              <ul
+                class="flex flex-wrap justify-center flex-row my-6 ">
+
+                <li class="mb-2 lg:mb-0">
+                  <a href="#" class="text-green-600 hover:text-gray-300 px-3"><i
+                      class="fab fa-facebook-f"></i></a>
+                </li>
+                <li class="mb-2 lg:mb-0">
+                  <a href="#" class="text-green-600 hover:text-gray-300 px-3"><i
+                      class="fab fa-twitter"></i></a>
+                </li>
+                <li class="mb-2 lg:mb-0">
+                  <a href="#" class="text-green-600 hover:text-gray-300 px-3"><i
+                      class="fab fa-instagram"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+
+  <!-- Rating System -->
+  <section>
+        <div
+          class=" mx-auto  rounded-2xl  p-4 md:pl-8 md:pr-8">
+         
+            <div class="bg-white  container mx-auto text-center p-4  rounded-2xl ">
+            <h2 class="text-3xl font-bold mb-4">Rate Us</h2>
+
+            <div class="flex items-center mb-2">
+              <svg class="w-4 h-4 text-yellow-400 me-1" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor" viewBox="0 0 22 20">
+                <path
+                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+              </svg>
+              <svg class="w-4 h-4 text-yellow-400 me-1" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor" viewBox="0 0 22 20">
+                <path
+                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+              </svg>
+              <svg class="w-4 h-4 text-yellow-400 me-1" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor" viewBox="0 0 22 20">
+                <path
+                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+              </svg>
+              <svg class="w-4 h-4 text-yellow-400 me-1" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor" viewBox="0 0 22 20">
+                <path
+                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+              </svg>
+              <svg class="w-4 h-4 text-gray-400 me-1 dark:text-gray-500"
+                aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor" viewBox="0 0 22 20">
+                <path
+                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+              </svg>
+              <p
+                class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">4.95</p>
+              <p
+                class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">out
+                of</p>
+              <p
+                class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">5</p>
+            </div>
+            <p
+              class="text-sm font-medium text-gray-500 dark:text-gray-400">1,745
+              global ratings</p>
+            <div class="flex items-center mt-4">
+              <a href="#"
+                class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">5
+                star</a>
+              <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
+                <div class="h-5 bg-green-600 rounded" style="width: 70%"></div>
+              </div>
+              <span
+                class="text-sm font-medium text-gray-500 dark:text-gray-400">70%</span>
+            </div>
+            <div class="flex items-center mt-4">
+              <a href="#"
+                class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">4
+                star</a>
+              <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
+                <div class="h-5 bg-green-600 rounded" style="width: 17%"></div>
+              </div>
+              <span
+                class="text-sm font-medium text-gray-500 dark:text-gray-400">17%</span>
+            </div>
+            <div class="flex items-center mt-4">
+              <a href="#"
+                class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">3
+                star</a>
+              <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
+                <div class="h-5 bg-green-600 rounded" style="width: 8%"></div>
+              </div>
+              <span
+                class="text-sm font-medium text-gray-500 dark:text-gray-400">8%</span>
+            </div>
+            <div class="flex items-center mt-4">
+              <a href="#"
+                class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">2
+                star</a>
+              <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
+                <div class="h-5 bg-green-600 rounded" style="width: 4%"></div>
+              </div>
+              <span
+                class="text-sm font-medium text-gray-500 dark:text-gray-400">4%</span>
+            </div>
+            <div class="flex items-center mt-4">
+              <a href="#"
+                class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">1
+                star</a>
+              <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
+                <div class="h-5 bg-green-600 rounded" style="width: 1%"></div>
+              </div>
+              <span
+                class="text-sm font-medium text-gray-500 dark:text-gray-400">1%</span>
+            </div>
+
+            <button
+              class="bg-gray-100 text-green-600 py-2 px-4 rounded-full hover:bg-green-700 mt-4">Submit</button>
+          </div>
+        </section>
+
+
+        <footer class="bg-gray-100 text-black mt-12">
+          <div class="footer mx-auto py-6 px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <!-- Company -->
+              <div class="mb-6 md:mb-0">
+                <h2 class="font-bold text-xl mb-4">Company</h2>
+                <ul>
+                  <li>
+                    <a href="#" class="flex items-center mb-2">
+                      <i class="fas fa-info-circle text-green-700 mr-2"></i> About Us
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="flex items-center mb-2">
+                      <i class="fas fa-briefcase text-green-700 mr-3"></i> Careers
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="flex items-center mb-2">
+                      <i class="fas fa-newspaper text-green-700 mr-3"></i> Press Releases
+                    </a>
+                  </li>
+                </ul>
+              </div>
+        
+              <!-- Resources -->
+              <div class="mb-6 md:mb-0">
+                <h2 class="font-bold text-xl mb-4">Resources</h2>
+                <ul>
+                  <li>
+                    <a href="#" class="flex items-center mb-2">
+                      <i class="fas fa-blog text-green-700 mr-3"></i> Blog
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="flex items-center mb-2">
+                      <i class="fas fa-video text-green-700 mr-3"></i> Video Tutorials
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="flex items-center mb-2">
+                      <i class="fas fa-seedling text-green-700 mr-3"></i> Agri News
+                    </a>
+                  </li>
+                </ul>
+              </div>
+        
+              <!-- Contact Us -->
+              <div class="mb-6 md:mb-0">
+                <h2 class="font-bold text-xl mb-4">Contact Us</h2>
+                <ul>
+                  <li>
+                    <a href="#" class="flex items-center mb-2">
+                      <i class="fas fa-envelope text-green-700 mr-3"></i> Contact
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="flex items-center mb-2">
+                      <i class="fas fa-life-ring text-green-700 mr-3"></i> Help
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="flex items-center mb-2">
+                      <i class="fas fa-question-circle text-green-700 mr-3"></i> FAQs
+                    </a>
+                  </li>
+                </ul>
+              </div>
+        
+              <!-- Newsletter -->
+              <div>
+                <h2 class="font-bold text-xl mb-4">Newsletter</h2>
+                <p class="mb-4">
+                  Subscribe to our newsletter for the latest updates.
+                </p>
+                <form class="flex flex-col ">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="py-2 border border-green-700 rounded-2xl shadow-sm focus:ring focus:ring-green-600 px-4 mb-2 sm:mb-0 mr-2"
+                  placeholder="name@company.com"
+                  required
+                />
+                  <button
+                    type="submit"
+                    class="bg-gray-200 border border-green-700 text-green-700 py-2 px-4 rounded-2xl hover:bg-green-600 hover:text-white transition mr-2 mt-2 "
+                  >
+                    Subscribe
+                  </button>
+                </form>
+              </div>
+            </div>
+        
+            <div
+              class="flex flex-col lg:flex-row justify-between items-center mt-10 border-t-2 pt-4"
+            >
+              <p class="mb-4 text-black lg:mb-0">
+                &copy; 2024 AgriSolutionsPakistan. All rights reserved.
+              </p>
+              <ul class="flex flex-wrap lg:flex-row text-bold mx-auto">
+                <li class="mb-2 lg:mb-0">
+                  <a href="#" class="text-black hover:text-green-600 px-3"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li class="mb-2 lg:mb-0">
+                  <a href="#" class="text-black hover:text-green-600 px-3"
+                    >Terms of Use</a
+                  >
+                </li>
+                <li class="mb-2 lg:mb-0">
+                  <a href="#" class="text-black hover:text-green-600 mr-4"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+              <ul class="social-icons flex flex-wrap lg:flex-row mt-4 lg:mt-0 text-2xl mr-20 ">
+                     <li class="mb-2 lg:mb-0">
+                  <a href="#" class="facbook hover:text-facebook px-3">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li class="mb-2 lg:mb-0">
+                  <a href="#" class="twitter hover:text-twitter px-3">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="mb-2 lg:mb-0">
+                  <a href="#" class="instagram hover:text-instagram px-3">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+                <li class="mb-2 lg:mb-0">
+                  <a href="#" class="linkedin hover:text-linkedin px-3">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
+                <li class="mb-2 lg:mb-0">
+                  <a href="#" class="youtube hover:text-youtube px-3">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+        <script src="js/homepage.js"></script>
+      </body>
+
+    </html>

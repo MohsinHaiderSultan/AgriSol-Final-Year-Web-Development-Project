@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Market Access - AgriSolutionsPakistan</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/HomePage.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet" />
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLR6DQ8C/AFQ1Ic+kp0k5xKPtsG9NKOWI4Q1Hg6P4" crossorigin="anonymous"></script>
+
+  </head>
+
+  <body class="bg-gray-200">
+    <div class="h-screen bg-cover bg-fixed bg-center bg-no-repeat shadow-lg rounded-2xl"
+      style="background-image: url('images/freestockpro.jpg');">
+
+      <div class="header text-white shadow-lg">
+        <div
+          class="navbar bg-green-700  mx-auto flex items-center justify-between py-4">
+          <div class="flex items-center ml-3 ">
+            <img src="images/logo.jpeg" alt="logo"
+              class="h-10 w-10 mr-2 rounded-full" />
+            <h1 class="font-bold text-2xl">AgriSolutionsPakistan</h1>
+          </div>
+          <!-- Hamburger menu icon -->
+          <button class="md:hidden" onclick="toggleMenu()">
+            <svg
+              class="hamburger w-7 h-7 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+          <!-- Navbar Links -->
+          <ul class="menu hidden md:flex items-center space-x-6">
+            <li><a href="HomePage.php">Home</a></li>
+            <li><a href="ContactUs.html">Contact</a></li>
+            
+            <button id="dropdownAvatarNameButton" data-dropdown-toggle="dropdownAvatarName" class="text-white flex items-center  rounded-full hover:text-green-600 md:me-0 focus:ring-gray-100 mr4  " type="button">
+              <img class="w-10 h-10 m-1 rounded-full" src="images/rana.jpeg" alt="user photo">
+              <svg class="w-2.5 h-2.5 ms-3 mr-4 ml-2 mt-1 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+              </svg>
+              </button>
+              
+              <!-- Dropdown menu -->
+              <div id="dropdownAvatarName" class="dropdown-item z-10 w-44 p-6  bg-green-700  divide-y divide-gray-100 rounded-lg hidden  dark:bg-gray-700 dark:divide-gray-600">
+                  <div class=" py-3 text-sm text-black ">
+                    <div class="font-medium ">Rana Mudassir Ali</div>
+                    <div class="truncate">ranamudassirali9@gmail.com</div>
+                  </div>
+                  <ul class="text-sm" >
+                    <li>
+                      <a href="#" class="block ">Dashboard</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block">Settings</a>
+                    </li>
+                    <li>
+                      <a href="Get_involved" class="block">Get Involved</a>
+                    </li>
+                  </ul>
+                  <div class="py-2">
+                    <a href="loginPage.html" class="flex pl-4 py-2  text-sm text-black rounded-2xl hover:bg-green-700 hover:text-white font-bold ">Sign out</a>        
+                  </div>
+              </div>
+         </ul>
+        </div>
+      </div>
+         
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="menu hidden md:hidden bg-green-700 text-white">
+        <ul class="mobile">
+            <li><a href="HomePage.php" class="block px-4 py-2 ml-4">Home</a></li>
+            <li>
+              <a href="ResourcesPage.html">Resources</a>
+            </li>
+            <li><a href="AboutUs.html" class="block px-4 py-2 ml-4">About Us</a></li>
+            <li><a href="ContactUs.html" class="block px-4 py-2 ml-4">Contact</a></li>
+           <li>
+            <a href="loginPage.html" class="block px-4 py-2">
+              <button
+            class="w-full bg-gray-200 text-green-700 py-2 rounded-full hover:bg-green-600 hover:text-white">
+            Join Us
+          </button>
+           </li> 
+          </a>       
+          </ul>
+      </div>
+
+      <div class="container mx-auto py-52 text-center">
+        <h1 class="text-4xl font-bold mb-5 text-green-900">
+          Market Access
+        </h1>
+        <p class="text-green-900 mb-6 font-bold">Expand your market reach with our comprehensive market access solutions.</p>
+      </div>
+    </div>
+
+
+    
+
+    <div class="container mx-auto py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-lg shadow-md transform hover:-translate-y-1 hover:shadow-lg transition duration-300">
+          <h3 class="text-xl font-bold mb-4">Product List</h3>
+          <div>
+            <form method="post" action="product.php" enctype="multipart/form-data" class="bg-white shadow-md rounded-lg p-8">
+              <div class="mb-4">
+                <label for="name" class="block text-gray-700 font-bold mb-2">Product Name</label>
+                <input type="text" name="name" placeholder="Product Name" required class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
+              </div>
+              <div class="mb-4">
+                <label for="quantity" class="block text-gray-700 font-bold mb-2">Quantity</label>
+                <input type="text" name="quantity" placeholder="Quantity" required class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
+              </div>
+              <div class="mb-4">
+                <label for="price" class="block text-gray-700 font-bold mb-2">Price</label>
+                <input type="text" name="price" placeholder="Price" required class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
+              </div>
+              <div class="mb-4">
+                <label for="quality" class="block text-gray-700 font-bold mb-2">Quality</label>
+                <select name="quality" required class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
+                  <option value="low">Low</option>
+                  <option value="medium">Medium</option>
+                  <option value="high">High</option>
+                </select>
+              </div>
+              <div class="mb-4">
+                <label for="images" class="block text-gray-700 font-bold mb-2">Product Images</label>
+                <input type="file" name="images[]" multiple required class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
+              </div>
+              <div class="mb-4">
+                <label for="description" class="block text-gray-700 font-bold mb-2">Description</label>
+                <textarea name="description" placeholder="Description" required class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline h-32"></textarea>
+              </div>
+              <button type="submit" name="create" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Create Product</button>
+            </form>
+          </div>
+          
+        </div>
+        
+        <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+            <img src="images/1563933264575.jpg" alt="Product Image" class="w-full h-40 object-cover rounded-t-lg mb-4">
+            <h3 class="text-2xl font-bold mb-4">Product To Buy</h3>
+            <ul class="list-disc pl-4 mb-4">
+              <li>Fresh produce (fruits and vegetables)</li>
+              <li>Livestock (meat, dairy, and poultry)</li>
+              <li>Grains (wheat, rice, and corn)</li>
+              <li>Value-added products (jams, honey, and spices)</li>
+              <li>Farm-to-table delivery services</li>
+            </ul>
+            <a href="product_list.php">
+              <button class="bg-green-700 text-white py-2 px-6 rounded-full hover:bg-green-600 transition duration-300">Check Products</button>
+            </a>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300">            <img src="images/20927771.jpg" alt="Market Trends Image" class="w-full h-40 object-cover rounded-t-lg mb-4">
+            <h3 class="text-2xl font-bold mb-4">Market Trends</h3>
+            <p class="text-gray-700 mb-4">Stay informed about the latest market trends to make informed decisions.</p>
+            <a href="#" class="text-green-700 hover:underline">Read More</a>
+          </div>
+      
+        </div>
+
+    <div class="footer bg-green-700 text-white py-8 mt-16">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center">
+          <img src="images/logo.jpeg" alt="logo" class="h-10 w-10 mr-2" />
+          <span class="font-bold text-lg">AgriSolutionsPakistan</span>
+        </div>
+        <p class="text-sm">
+          &copy; 2023 AgriSolutionsPakistan. All rights reserved.
+        </p>
+      </div>
+    </div>
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("mobileMenu");
+        menu.classList.toggle("hidden");
+      }
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

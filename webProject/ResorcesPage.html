@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgriSolutionsPakistan - Empowering Farmers, Nurturing Growth</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/HomePage.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet" />
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLR6DQ8C/AFQ1Ic+kp0k5xKPtsG9NKOWI4Q1Hg6P4" crossorigin="anonymous"></script>
+
+      <style>
+        .features-section {
+            margin: 3rem 3rem 5rem;
+        }
+        .features-section h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .features-grid-wrapper {
+            overflow: hidden;
+            position: relative;
+        }
+        .features-grid {
+            display: flex;
+            gap: 1.5rem;
+            animation: scroll 20s linear infinite;
+        }
+        .feature-card {
+            padding: 2rem;
+            background: white;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+            border-radius: 0.5rem;
+            flex: 0 0 auto;
+            width: 18rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .feature-card:hover {
+            transform: scale(1.05);
+        }
+        .feature-card i {
+            color: #16a34a;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .feature-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .feature-card p {
+            color: #4b5563;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .feature-card button {
+            background-color: #16a34a;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 9999px;
+            margin-top: 1.5rem;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .feature-card button:hover {
+            background-color: #15803d;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+
+  </head>
+
+
+  <body class="bg-gray-200">
+
+    <div class="h-screen bg-cover bg-fixed bg-center bg-no-repeat shadow-lg rounded-2xl"
+      style="background-image: url('images/freestockpro.jpg');">
+
+      <div class="header text-white shadow-lg">
+        <div
+          class=" navbar bg-green-700  mx-auto flex items-center justify-between py-4">
+          <div class="flex items-center ml-3 ">
+            <img src="images/logo.jpeg" alt="logo"
+              class="h-10 w-10 mr-2 rounded-full" />
+            <h1 class="font-bold text-2xl">AgriSolutionsPakistan</h1>
+          </div>
+          <!-- Hamburger menu icon -->
+          <button class="md:hidden" onclick="toggleMenu()">
+            <svg
+              class="hamburger w-7 h-7 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+          <!-- Navbar Links -->
+          <ul class="menu hidden md:flex items-center space-x-6">
+            <li><a href="HomePage.php">Home</a></li>
+            <li><a href="ResorcesPage.html">Resources</a></li>            
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="contectUs.html">Contact</a></li>
+            
+             <button id="dropdownAvatarNameButton" data-dropdown-toggle="dropdownAvatarName" class="text-white flex items-center  rounded-full hover:text-green-600 md:me-0 focus:ring-gray-100 mr4  " type="button">
+              <img class="w-10 h-10 m-1 rounded-full" src="images/rana.jpeg" alt="user photo">
+              <svg class="w-2.5 h-2.5 ms-3 mr-4 ml-2 mt-1 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+              </svg>
+              </button>
+              
+              <!-- Dropdown menu -->
+              <div id="dropdownAvatarName" class="dropdown-item z-10 w-44 p-6  bg-green-700  divide-y divide-gray-100 rounded-lg hidden  dark:bg-gray-700 dark:divide-gray-600">
+                  <div class=" py-3 text-sm text-black ">
+                    <div class="font-medium ">Rana Mudassir Ali</div>
+                    <div class="truncate">ranamudassirali9@gmail.com</div>
+                  </div>
+                  <ul class="text-sm" >
+                    <li>
+                      <a href="#" class="block ">Dashboard</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block">Settings</a>
+                    </li>
+                    <li>
+                      <a href="Get_involved" class="block">Get Involved</a>
+                    </li>
+                  </ul>
+                  <div class="py-2">
+                    <a href="loginPage.html" class="flex pl-4 py-2  text-sm text-black rounded-2xl hover:bg-green-700 hover:text-white font-bold ">Sign out</a>        
+                  </div>
+              </div>
+         </ul>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="manu hidden md:hidden bg-green-700 text-white">
+        <ul class="mobile">
+            <li><a href="HomePage.php" class="block px-4 py-2 ml-4">Home</a></li>
+            <li>
+              <a href="ResorcesPage.html">Resources</a>
+            </li>
+            <li><a href="AboutUs.html" class="block px-4 py-2 ml-4">About Us</a></li>
+            <li><a href="contectUs.html" class="block px-4 py-2 ml-4">Contact</a></li>
+           <li>
+            <a href="loginPage.html" class="block px-4 py-2">
+              <button
+            class="w-full bg-gray-200 text-green-700 py-2 rounded-full hover:bg-green-600 hover:text-white">
+            Join Us
+          </button>
+           </li> 
+          </a>       
+          </ul>
+     </div>
+
+      <div class="container mx-auto py-52 text-center">
+        <h1 class="text-4xl font-bold mb-5 text-green-900">
+          Welcome to AgriSolutionsPakistan Resources
+        </h1>
+        <p class="text-green-900 mb-6 text-xl ">Empowering Farmers, Nurturing
+          Growth</p>
+        
+      </div>
+
+
+         <!-- Features Section -->
+        
+         <div class="features-section">
+          <h2>Key Features and Resources</h2>
+          <div class="features-grid-wrapper">
+              <div class="features-grid">
+                  <div class="feature-card">
+                      <i class="fas fa-leaf"></i>
+                      <h3>Agricultural Best Practices</h3>
+                      <p>Information on modern farming techniques, crop management, and sustainable agriculture practices tailored to Pakistani farmers.</p>
+                      <a href="ABP.html"><button>Learn More</button></a>
+                  </div>
+                  <div class="feature-card">
+                      <i class="fas fa-chart-line"></i>
+                      <h3>Market Access</h3>
+                      <p>Guidance on accessing markets, price trends, marketing strategies, and value-added opportunities.</p>
+                      <a href="MA.html"><button>Learn More</button></a>
+                  </div>
+                  <div class="feature-card">
+                      <i class="fas fa-money-bill-alt"></i>
+                      <h3>Financial Assistance</h3>
+                      <p>Details on government schemes, subsidies, loans, and grants available to farmers.</p>
+                      <a href="FA.html"><button>Learn More</button></a>
+                  </div>
+                  <div class="feature-card">
+                      <i class="fas fa-phone"></i>
+                      <h3>Technical Support</h3>
+                      <p>Access to agricultural extension services, helplines, online forums, and expert consultations.</p>
+                      <a href="TS.html"><button>Learn More</button></a>
+                  </div>
+                  <!-- Duplicating cards to ensure smooth scrolling -->
+                  <div class="feature-card">
+                      <i class="fas fa-leaf"></i>
+                      <h3>Agricultural Best Practices</h3>
+                      <p>Information on modern farming techniques, crop management, and sustainable agriculture practices tailored to Pakistani farmers.</p>
+                      <a href="ABP.html"><button>Learn More</button></a>
+                  </div>
+                  <div class="feature-card">
+                      <i class="fas fa-chart-line"></i>
+                      <h3>Market Access</h3>
+                      <p>Guidance on accessing markets, price trends, marketing strategies, and value-added opportunities.</p>
+                      <a href="MA.html"><button>Learn More</button></a>
+                  </div>
+                  <div class="feature-card">
+                      <i class="fas fa-money-bill-alt"></i>
+                      <h3>Financial Assistance</h3>
+                      <p>Details on government schemes, subsidies, loans, and grants available to farmers.</p>
+                      <a href="FA.html"><button>Learn More</button></a>
+                  </div>
+                  <div class="feature-card">
+                      <i class="fas fa-phone"></i>
+                      <h3>Technical Support</h3>
+                      <p>Access to agricultural extension services, helplines, online forums, and expert consultations.</p>
+                      <a href="TS.html"><button>Learn More</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+
+    <section id="agricultural-best-practices" class="px-4 py-16 bg-white shadow-md rounded-lg mx-12 mb-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-6">Agricultural Best Practices</h2>
+            <p class="text-lg text-gray-700 mb-6 text-center">
+                Discover the best practices for modern farming techniques, crop management, and sustainable agriculture.
+            </p>
+    
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                <!-- Soil Management -->
+                <div class="image-container">
+                    <h3 class="text-2xl font-semibold mb-4">Soil Management</h3>
+                    <img src="images/soil-management-practices-jpg.jpg" alt="Soil Management" class="mb-4 rounded-lg shadow-md">
+                    <p class="mb-4">
+                        Proper soil management is crucial for healthy crop growth. Techniques include soil testing, crop rotation, and the use of organic fertilizers to maintain soil fertility and structure.
+                    </p>
+                </div>
+    
+                <!-- Water Conservation -->
+                <div class="image-container">
+                    <h3 class="text-2xl font-semibold mb-4">Water Conservation</h3>
+                    <img src="images/A_Guide_to_Water_Conservation_-_Saving_Water_and_the_Earth_480x480 (1).webp" alt="Water Conservation" class="mb-4 rounded-lg shadow-md">
+                    <p class="mb-4">
+                        Efficient irrigation methods such as drip irrigation and rainwater harvesting can help conserve water while ensuring crops receive adequate moisture.
+                    </p>
+                </div>
+    
+                <!-- Integrated Pest Management (IPM) -->
+                <div class="image-container">
+                    <h3 class="text-2xl font-semibold mb-4">Integrated Pest Management (IPM)</h3>
+                    <img src="images/The-Process-1.jpg" alt="Integrated Pest Management" class="mb-4 rounded-lg shadow-md">
+                    <p class="mb-4">
+                        IPM combines biological, cultural, mechanical, and chemical tools to manage pests in an environmentally and economically sustainable way.
+                    </p>
+                </div>
+    
+                <!-- Crop Diversification -->
+                <div class="image-container">
+                    <h3 class="text-2xl font-semibold mb-4">Crop Diversification</h3>
+                    <img src="images/infographie en.png" alt="Crop Diversification" class="mb-4 rounded-lg shadow-md">
+                    <p class="mb-4">
+                        Diversifying crops can reduce risk and improve soil health by varying the demands placed on the soil and breaking pest and disease cycles.
+                    </p>
+                </div>
+    
+                <!-- Nutrient Management -->
+                <div class="image-container">
+                    <h3 class="text-2xl font-semibold mb-4">Nutrient Management</h3>
+                    <img src="images/f66782e9ac13d54d75079d699973b9de.webp" alt="Nutrient Management" class="mb-4 rounded-lg shadow-md">
+                    <p class="mb-4">
+                        Balancing the nutrient input with the crop needs ensures optimal growth and yield. This includes the use of organic and inorganic fertilizers based on soil tests.
+                    </p>
+                </div>
+    
+                <!-- Use of Technology -->
+                <div class="image-container">
+                    <h3 class="text-2xl font-semibold mb-4">Use of Technology</h3>
+                    <img src="images/smart-machinery.jpg" alt="Use of Technology" class="mb-4 rounded-lg shadow-md">
+                    <p class="mb-4">
+                        Adopting modern technology such as precision farming, drones, and AI can improve efficiency, monitor crop health, and increase productivity.
+                    </p>
+                </div>
+    
+                <!-- Post-Harvest Practices -->
+                <div class="image-container">
+                    <h3 class="text-2xl font-semibold mb-4">Post-Harvest Practices</h3>
+                    <img src="images/Vegetables-basket.jpg" alt="Post-Harvest Practices" class="mb-4 rounded-lg shadow-md">
+                    <p class="mb-4">
+                        Proper post-harvest handling, including cleaning, sorting, and storage, can reduce losses and maintain the quality of produce.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+   <!-- Market Access Section -->
+<section id="market-access" class="py-16 bg-gray-100 shadow-md rounded-lg mx-12 mb-16">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-6">Market Access</h2>
+        <p class="text-lg text-gray-700 mb-6 text-center">Guidance on accessing markets, understanding price trends, developing marketing strategies, and finding value-added opportunities.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+            <!-- Market Research -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-4">Market Research</h3>
+                <img src="images/market-research-cover.jpg" alt="Market Research" class="mb-4 rounded-lg shadow-md" width="400" height="300">
+                <p class="mb-4">Conducting thorough market research can help identify demand trends, potential markets, and competitive pricing for your products.</p>
+            </div>
+            
+            <!-- Direct Marketing -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-4">Direct Marketing</h3>
+                <img src="images/direct-marketing-743.jpg" alt="Direct Marketing" class="mb-4 rounded-lg shadow-md" width="400" height="300">
+                <p class="mb-4">Selling directly to consumers through farmers' markets, farm stands, and online platforms can often yield higher profits compared to traditional supply chains.</p>
+            </div>
+            
+            <!-- Value Addition -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-4">Value Addition</h3>
+                <img src="images/1563933264575.jpg" alt="Value Addition" class="mb-4 rounded-lg shadow-md" width="400" height="300">
+                <p class="mb-4">Processing raw agricultural products into value-added goods such as jams, sauces, and dried fruits can increase profitability and market reach.</p>
+            </div>
+            
+            <!-- Export Opportunities -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-4">Export Opportunities</h3>
+                <img src="images/20927771.jpg" alt="Export Opportunities" class="mb-4 rounded-lg shadow-md" width="400" height="300">
+                <p class="mb-4">Exploring export opportunities can open new markets and increase the demand for your agricultural products.</p>
+            </div>
+            
+            <!-- Branding and Packaging -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-4">Branding and Packaging</h3>
+                <img src="images/1_P-zred4ZKl1ixvgviZy3tA.jpg" alt="Branding and Packaging" class="mb-4 rounded-lg shadow-md" width="400" height="300">
+                <p class="mb-4">Effective branding and packaging can make your products stand out on the shelves and appeal to consumers, enhancing your market competitiveness.</p>
+            </div>
+            
+            <!-- Digital Marketing -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-4">Digital Marketing</h3>
+                <img src="images/images (1).jpg" alt="Digital Marketing" class="mb-4 rounded-lg shadow-md" width="400" height="300">
+                <p class="mb-4">Utilizing social media, email marketing, and online advertising can expand your reach and engage with a broader audience effectively.</p>
+            </div>
+            
+            <!-- Quality Assurance -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-4">Quality Assurance</h3>
+                <img src="images/shutterstock_593806076.webp" alt="Quality Assurance" class="mb-4 rounded-lg shadow-md" width="400" height="300">
+                <p class="mb-4">Maintaining high quality standards for your products can build trust with consumers and differentiate you from competitors.</p>
+            </div>
+            
+            <!-- Networking and Partnerships -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-4">Networking and Partnerships</h3>
+                <img src="images/1688014700122.jpg" alt="Networking and Partnerships" class="mb-4 rounded-lg shadow-md" width="400" height="300">
+                <p class="mb-4">Building relationships with other businesses, distributors, and industry influencers can open up new opportunities and markets for your products.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+
+    <style>
+        .image-container img {
+            width: 100%;
+            height: auto;
+            max-width: 400px; /* Adjust the max-width as needed */
+            max-height: 300px; /* Adjust the max-height as needed */
+            object-fit: cover;
+        }
+    </style>
+    
+   <!-- Financial Assistance Section -->
+<section id="financial-assistance" class="py-16 bg-white shadow-md rounded-lg mx-12 mb-16">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-6">Financial Assistance</h2>
+        <p class="text-lg text-gray-700 mb-6 text-center">Learn about various government schemes, subsidies, loans, and grants available to farmers.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+            <!-- Government Subsidies -->
+            <div class="image-container">
+                <h3 class="text-2xl font-semibold mb-4">Government Subsidies</h3>
+                <img src="images/new-fertilizer-subsidy.jpg" alt="Government Subsidies" class="mb-4 rounded-lg shadow-md" width="400" height="300">
+                <p class="mb-4">Various government subsidies are available to support farmers in purchasing seeds, fertilizers, and machinery at reduced costs.</p>
+            </div>
+            
+            <!-- Agricultural Loans -->
+            <div class="image-container">
+                <h3 class="text-2xl font-semibold mb-4">Agricultural Loans</h3>
+                <img src="images/images (4).jpg" alt="Agricultural Loans" class="mb-4 rounded-lg shadow-md" width="400" height="600">
+                <p class="mb-4">Banks and financial institutions offer agricultural loans with favorable terms to help farmers invest in equipment, land, and other resources.</p>
+            </div>
+            
+            <!-- Grant Programs -->
+            <div class="image-container">
+                <h3 class="text-2xl font-semibold mb-4">Grant Programs</h3>
+                <img src="images/images (2).jpg" alt="Grant Programs" class="mb-4 rounded-lg shadow-md" width="400" height="300">
+                <p class="mb-4">Several grant programs are available to fund innovative projects in sustainable farming, research, and development.</p>
+            </div>
+            
+            <!-- Insurance Schemes -->
+            <div class="image-container">
+                <h3 class="text-2xl font-semibold mb-4">Insurance Schemes</h3>
+                <img src="images/images (3).jpg" alt="Insurance Schemes" class="mb-4 rounded-lg shadow-md" width="400" height="300">
+                <p class="mb-4">Agricultural insurance schemes can protect farmers against crop losses due to natural disasters, pests, and diseases.</p>
+            </div>
+
+            <!-- Financial Planning -->
+            <div class="image-container">
+                <h3 class="text-2xl font-semibold mb-4">Financial Planning</h3>
+                <img src="images/farmplanningandbudgeting-200618030032-thumbnail.jpg" alt="Financial Planning" class="mb-4 rounded-lg shadow-md" width="400" height="300">
+                <p class="mb-4">Effective financial planning can help farmers manage their resources efficiently, plan for future investments, and ensure sustainability.</p>
+            </div>
+            
+            <!-- Cooperative Funding -->
+            <div class="image-container">
+                <h3 class="text-2xl font-semibold mb-4">Cooperative Funding</h3>
+                <img src="images/Cooperative-Farming-History-Types-Principles-Complete-Overview.webp" alt="Cooperative Funding" class="mb-4 rounded-lg shadow-md" width="400" height="300">
+                <p class="mb-4">Joining agricultural cooperatives can provide access to collective funding, shared resources, and better market opportunities.</p>
+            </div>
+            
+            <!-- Investment Opportunities -->
+            <div class="image-container">
+                <h3 class="text-2xl font-semibold mb-4">Investment Opportunities</h3>
+                <img src="images/your_investment_for_agriculture_project_proposal_ppt_powerpoint_design_ideas_slide01.jpg" alt="Investment Opportunities" class="mb-4 rounded-lg shadow-md" width="400" height="300">
+                <p class="mb-4">Exploring various investment opportunities can help farmers diversify their income sources and enhance financial stability.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+
+    <!-- Technical Support Section -->
+    <style>
+        .image-container img {
+            width: 100%;
+            height: auto;
+            max-width: 400px; /* Adjust the max-width as needed */
+            max-height: 300px; /* Adjust the max-height as needed */
+            object-fit: cover;
+            padding:5px;
+        }
+    </style>
+
+    <!-- Technical Support Section -->
+    <section id="technical-support" class="py-16 bg-gray-100 shadow-md rounded-lg mx-12 mb-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-6">Technical Support</h2>
+            <p class="text-lg text-gray-700 mb-6 text-center">Get access to agricultural extension services, helplines, online forums, and expert consultations.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                <!-- Extension Services -->
+                <div class="image-container">
+                    <h3 class="text-2xl font-semibold mb-4">Extension Services</h3>
+                    <img src="images/Role+of+Agricultural+Extension.jpg" alt="Extension Services" class="mb-4 rounded-lg shadow-md">
+                    <p class="mb-4">Extension services provide farmers with the latest agricultural knowledge, technology, and practices to improve productivity and sustainability.</p>
+                </div>
+                
+                <!-- Helplines -->
+                <div class="image-container">
+                    <h3 class="text-2xl font-semibold mb-4">Helplines</h3>
+                    <img src="images/1697110010928.jpg" alt="Helplines" class="mb-4 rounded-lg shadow-md">
+                    <p class="mb-4">Agricultural helplines offer immediate assistance and advice on various farming issues, including pest control, crop diseases, and market information.</p>
+                </div>
+                
+                <!-- Online Forums -->
+                <div class="image-container">
+                    <h3 class="text-2xl font-semibold mb-4">Online Forums</h3>
+                    <img src="images/Resiliency Forums.png" alt="Online Forums" class="mb-4 rounded-lg shadow-md">
+                    <p class="mb-4">Participating in online forums allows farmers to share experiences, ask questions, and get advice from peers and experts.</p>
+                </div>
+                
+                <!-- Expert Consultations -->
+                <div class="image-container">
+                    <h3 class="text-2xl font-semibold mb-4">Expert Consultations</h3>
+                    <img src="images/b6fb4003c8a28c1053fa4e75cdd034de.jpg" alt="Expert Consultations" class="mb-4 rounded-lg shadow-md">
+                    <p class="mb-4">Consulting with agricultural experts can provide personalized guidance and solutions to specific farming challenges.</p>
+                </div>
+
+                <!-- Technical Training -->
+                <div class="image-container">
+                    <h3 class="text-2xl font-semibold mb-4">Technical Training</h3>
+                    <img src="images/Training.jpg" alt="Technical Training" class="mb-4 rounded-lg shadow-md">
+                    <p class="mb-4">Technical training programs offer hands-on experience and skills development in various agricultural techniques and technologies.</p>
+                </div>
+
+                <!-- Mobile Apps -->
+                <div class="image-container">
+                    <h3 class="text-2xl font-semibold mb-4">Mobile Apps</h3>
+                    <img src="images/1692331385578.jpg" alt="Mobile Apps" class="mb-4 rounded-lg shadow-md">
+                    <p class="mb-4">Mobile apps provide farmers with easy access to weather updates, market prices, pest management tips, and more, right at their fingertips.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+   <!-- Footer -->
+   <footer class="bg-gray-100 text-black mt-24">
+    <div class="footer mx-auto py-6 px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Company -->
+        <div class="mb-6 md:mb-0">
+          <h2 class="font-bold text-xl mb-4">Company</h2>
+          <ul>
+            <li>
+              <a href="#" class="flex items-center mb-2">
+                <i class="fas fa-info-circle text-green-700 mr-2"></i> About Us
+              </a>
+            </li>
+            <li>
+              <a href="#" class="flex items-center mb-2">
+                <i class="fas fa-briefcase text-green-700 mr-3"></i> Careers
+              </a>
+            </li>
+            <li>
+              <a href="#" class="flex items-center mb-2">
+                <i class="fas fa-newspaper text-green-700 mr-3"></i> Press Releases
+              </a>
+            </li>
+          </ul>
+        </div>
+  
+        <!-- Resources -->
+        <div class="mb-6 md:mb-0">
+          <h2 class="font-bold text-xl mb-4">Resources</h2>
+          <ul>
+            <li>
+              <a href="#" class="flex items-center mb-2">
+                <i class="fas fa-blog text-green-700 mr-3"></i> Blog
+              </a>
+            </li>
+            <li>
+              <a href="#" class="flex items-center mb-2">
+                <i class="fas fa-video text-green-700 mr-3"></i> Video Tutorials
+              </a>
+            </li>
+            <li>
+              <a href="#" class="flex items-center mb-2">
+                <i class="fas fa-seedling text-green-700 mr-3"></i> Agri News
+              </a>
+            </li>
+          </ul>
+        </div>
+  
+        <!-- Contact Us -->
+        <div class="mb-6 md:mb-0">
+          <h2 class="font-bold text-xl mb-4">Contact Us</h2>
+          <ul>
+            <li>
+              <a href="#" class="flex items-center mb-2">
+                <i class="fas fa-envelope text-green-700 mr-3"></i> Contact
+              </a>
+            </li>
+            <li>
+              <a href="#" class="flex items-center mb-2">
+                <i class="fas fa-life-ring text-green-700 mr-3"></i> Help
+              </a>
+            </li>
+            <li>
+              <a href="#" class="flex items-center mb-2">
+                <i class="fas fa-question-circle text-green-700 mr-3"></i> FAQs
+              </a>
+            </li>
+          </ul>
+        </div>
+  
+        <!-- Newsletter -->
+        <div>
+          <h2 class="font-bold text-xl mb-4">Newsletter</h2>
+          <p class="mb-4">
+            Subscribe to our newsletter for the latest updates.
+          </p>
+          <form action="suscrib.php"  method="post" class="flex flex-col sm:flex-row">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="py-2 border border-green-700 rounded-2xl shadow-sm focus:ring focus:ring-green-600 px-4 mb-2 sm:mb-0 mr-2"
+            placeholder="name@company.com"
+            required
+          />
+            <button
+              type="submit"
+              class="bg-gray-200 border border-green-700 text-green-700 py-2 px-4 rounded-2xl hover:bg-green-600 hover:text-white transition"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+  
+      <div
+        class="flex flex-col lg:flex-row justify-between items-center mt-10 border-t-2 pt-4"
+      >
+        <p class="mb-4 text-black lg:mb-0">
+          &copy; 2024 AgriSolutionsPakistan. All rights reserved.
+        </p>
+        <ul class="flex flex-wrap lg:flex-row text-bold mx-auto">
+          <li class="mb-2 lg:mb-0">
+            <a href="#" class="text-black hover:text-green-600 px-3"
+              >Privacy Policy</a
+            >
+          </li>
+          <li class="mb-2 lg:mb-0">
+            <a href="#" class="text-black hover:text-green-600 px-3"
+              >Terms of Use</a
+            >
+          </li>
+          <li class="mb-2 lg:mb-0">
+            <a href="#" class="text-black hover:text-green-600 mr-4"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+        <ul class="social-icons flex flex-wrap lg:flex-row mt-4 lg:mt-0 text-2xl mr-20 ">
+               <li class="mb-2 lg:mb-0">
+            <a href="#" class="facbook hover:text-facebook px-3">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li class="mb-2 lg:mb-0">
+            <a href="#" class="twitter hover:text-twitter px-3">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li class="mb-2 lg:mb-0">
+            <a href="#" class="instagram hover:text-instagram px-3">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li class="mb-2 lg:mb-0">
+            <a href="#" class="linkedin hover:text-linkedin px-3">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </li>
+          <li class="mb-2 lg:mb-0">
+            <a href="#" class="youtube hover:text-youtube px-3">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+    <script src="js/homepage.js"></script>
+</body>
+</html>
+

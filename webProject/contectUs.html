@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgriSolutionsPakistan - Empowering Farmers, Nurturing Growth</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/HomePage.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet" />
+
+  </head>
+
+
+  <body class="bg-gray-200">
+    <section>
+      <div id="background-container" class="h-screen bg-cover bg-fixed bg-center bg-no-repeat shadow-lg rounded-2xl"
+      style="background-image: url('images/pexels-quang-nguyen-vinh-222549-2132250.jpg');">
+
+ 
+
+      <div class="header text-white shadow-lg">
+        <div
+          class=" navbar bg-green-700  mx-auto flex items-center justify-between py-4">
+          <div class="flex items-center">
+            <img src="images/logo.jpeg" alt="logo"
+              class="h-10 w-10 mr-3 rounded-full" />
+            <h1 class="font-bold text-2xl">AgriSolutionsPakistan</h1>
+          </div>
+          <!-- Hamburger menu icon -->
+          <button class="md:hidden" onclick="toggleMenu()">
+            <svg
+              class="hamburger w-7 h-7 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+          <!-- Navbar Links -->
+          <ul class="menu hidden md:flex items-center space-x-6">
+            <li><a href="HomePage.php">Home</a></li>
+            <li>
+              <a href="resources.html">Resources</a>
+            </li>
+            <li><a href="AboutUs.html">About
+                Us</a></li>
+            <li>
+              <a href="contectUs.html">Contact</a>
+            </li>
+            
+              <a href="loginPage.html">
+                <button
+                  class="bg-white text-green-700 py-2 px-6 rounded-full hover:bg-green-600 hover:text-white">
+                  Join Us
+                </button>
+              </a>
+            
+          </ul>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="manu hidden md:hidden bg-green-700 text-white">
+        <ul class="mobile">
+            <li><a href="HomePage.php" class="block px-4 py-2 ml-4">Home</a></li>
+            <li><a href="resources.html" class="block px-4 py-2 ml-4">Resources</a></li>
+            <li><a href="AboutUs.html" class="block px-4 py-2 ml-4">About Us</a></li>
+            <li><a href="contectUs.html" class="block px-4 py-2 ml-4">Contact</a></li>
+           <li>
+            <a href="loginPage.html" class="block px-4 py-2">
+              <button
+            class="w-full bg-gray-200 text-green-700 py-2 rounded-full hover:bg-green-600 hover:text-white">
+            Join Us
+          </button>
+           </li> 
+          </a>       
+          </ul>
+      </div>
+
+      <div class="container mx-auto py-52 text-center">
+        <h1 class="text-4xl font-bold mb-5 text-green-900">
+          Welcome to AgriSolutionsPakistan
+        </h1>
+        <p class="text-green-900 mb-6 text-xl ">Empowering Farmers, Nurturing
+          Growth</p>
+        
+      </div>
+      
+          <div class="container text-center mx-auto md:mt-80 ">
+              <div class="container text-center lg:py-14 py-20 bg-white rounded-xl lg:-mt-60 mt-60 mr-10">
+                <h2 class="text-4xl font-bold mb-8">Get in Touch</h2>
+                <p class="text-lg text-gray-700 mb-8">
+                  We'd love to hear from you! Whether you have a question, feedback, or
+                  just want to say hello, please don't hesitate to reach out.
+                </p>
+             </div>
+          </div>
+      </div>
+    </div>
+  </section>
+        
+  <button onclick="scrollToTop()" id="scrollToTopBtn"
+    title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+
+    <section>
+      <div class="flex flex-wrap md:mt-28">
+          <div class="w-full xl:w-1/3 lg:p-2 ml-3 lg:mt-2 max-w-sm ml-8 lg:mt-16">
+              <div class="bg-white shadow-md rounded-lg p-4 lg:ml-14 md:ml-4 sm:ml-2">
+                  <h2 class="text-2xl font-bold text-center mb-10">Contact Form</h2>
+                  <form class="space-y-10 p-4" action="contact.php" method="post">
+                      <div class="relative">
+                          <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
+                          <input
+                              type="text"
+                              id="name"
+                              name="name"
+                              class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-green-600"
+                              placeholder="Enter your name"
+                              required
+                          />
+                      </div>
+                      <div class="relative">
+                          <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+                          <input
+                              type="email"
+                              id="email"
+                              name="email"
+                              class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-green-600"
+                              placeholder="Enter your email"
+                              required
+                          />
+                      </div>
+                      <div class="relative">
+                          <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Message</label>
+                          <textarea
+                              id="message"
+                              name="message"
+                              class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-green-600"
+                              placeholder="Enter your message"
+                              rows="5"
+                              required
+                          ></textarea>
+                      </div>
+                      <button
+                          type="submit"
+                          class="bg-green-700 text-white py-2 px-4 rounded-full hover:bg-green-500 shadow-md transition duration-300 ease-in-out"
+                      >
+                          Send Message
+                      </button>
+                  </form>
+              </div>
+          </div>
+  
+    
+      <div class="w-full xl:w-2/3 p-4 md:p-4 lg:mt-14">
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <h2 class="text-2xl font-bold mb-4 text-center mb-12">Contact Information</h2>
+          <p class="block mb-8 text-sm font-medium text-gray-900 dark:text-white">
+            <i class="fas fa-envelope text-green-700 mr-2"></i>
+            Email:
+            <a
+              href="mailto:info@agrisolutionspakistan.com"
+              class="text-green-700 hover:text-green-600"
+              >info@agrisolutionspakistan.com</a
+            >
+          </p>
+          <p class="block mb-8 text-sm font-medium text-gray-900 dark:text-white">
+            <i class="fas fa-phone text-green-700 mr-2"></i>
+            Phone:
+            <a href="tel:+923000000" class="text-green-700 hover:text-green-600"
+              >+92 340 000000</a
+            >
+          </p>
+          <p class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+            <i class="fas fa-map-marker-alt text-green-700 mr-2"></i>
+            Office Address: <br /><br>COMSATS University Islamabad - Sahiwal Campus,
+            Pakistan
+          </p>
+          <div class="mapouter">
+            <div class="gmap_canvas">
+              <iframe
+                width="100%"
+                height="300"
+                id="gmap_canvas"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3512.46445446352!2d73.1442414153084!3d30.641621100000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3922b6e4dde0c501%3A0xc37ea3d85326203!2sCOMSATS%20University%20Islamabad%20-%20Sahiwal%20Campus!5e0!3m2!1sen!2sus!4v1681686614414!5m2!1sen!2sus"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="w-full p-16 bg-white rounded-2xl mx-20 mt-10">
+          <h2 class="text-2xl font-bold mb-4 text-center mb-10">Follow Us</h2>
+          <ul class="social-icons flex flex-wrap  justify-center lg:flex-row mt-4 lg:mt-0 text-2xl  ">
+            <li class="mb-2 lg:mb-0">
+         <a href="#" class="facbook hover:text-facebook px-3">
+           <i class="fab fa-facebook-f"></i>
+         </a>
+       </li>
+       <li class="mb-2 lg:mb-0">
+         <a href="#" class="twitter hover:text-twitter px-3">
+           <i class="fab fa-twitter"></i>
+         </a>
+       </li>
+       <li class="mb-2 lg:mb-0">
+         <a href="#" class="instagram hover:text-instagram px-3">
+           <i class="fab fa-instagram"></i>
+         </a>
+       </li>
+       <li class="mb-2 lg:mb-0">
+         <a href="#" class="linkedin hover:text-linkedin px-3">
+           <i class="fab fa-linkedin-in"></i>
+         </a>
+       </li>
+       <li class="mb-2 lg:mb-0">
+         <a href="#" class="youtube hover:text-youtube px-3">
+           <i class="fab fa-youtube"></i>
+         </a>
+       </li>
+     </ul>
+        </div>
+        </div>
+      </section>
+    
+      
+    <!-- footer -->
+    <section>
+      <footer class="bg-gray-100 text-black mt-24 lg:mt-14">
+        <div class="footer mx-auto py-6 px-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Company -->
+            <div class="mb-6 md:mb-0">
+              <h2 class="font-bold text-xl mb-4">Company</h2>
+              <ul>
+                <li>
+                  <a href="#" class="flex items-center mb-2">
+                    <i class="fas fa-info-circle text-green-700 mr-2"></i> About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex items-center mb-2">
+                    <i class="fas fa-briefcase text-green-700 mr-3"></i> Careers
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex items-center mb-2">
+                    <i class="fas fa-newspaper text-green-700 mr-3"></i> Press Releases
+                  </a>
+                </li>
+              </ul>
+            </div>
+      
+            <!-- Resources -->
+            <div class="mb-6 md:mb-0">
+              <h2 class="font-bold text-xl mb-4">Resources</h2>
+              <ul>
+                <li>
+                  <a href="#" class="flex items-center mb-2">
+                    <i class="fas fa-blog text-green-700 mr-3"></i> Blog
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex items-center mb-2">
+                    <i class="fas fa-video text-green-700 mr-3"></i> Video Tutorials
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex items-center mb-2">
+                    <i class="fas fa-seedling text-green-700 mr-3"></i> Agri News
+                  </a>
+                </li>
+              </ul>
+            </div>
+      
+            <!-- Contact Us -->
+            <div class="mb-6 md:mb-0">
+              <h2 class="font-bold text-xl mb-4">Contact Us</h2>
+              <ul>
+                <li>
+                  <a href="#" class="flex items-center mb-2">
+                    <i class="fas fa-envelope text-green-700 mr-3"></i> Contact
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex items-center mb-2">
+                    <i class="fas fa-life-ring text-green-700 mr-3"></i> Help
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex items-center mb-2">
+                    <i class="fas fa-question-circle text-green-700 mr-3"></i> FAQs
+                  </a>
+                </li>
+              </ul>
+            </div>
+      
+            <!-- Newsletter -->
+            <div>
+              <h2 class="font-bold text-xl mb-4">Newsletter</h2>
+              <p class="mb-4">
+                Subscribe to our newsletter for the latest updates.
+              </p>
+              <form class="flex flex-col " action="suscrib.php" method="post">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="py-2 border border-green-700 rounded-2xl shadow-sm focus:ring focus:ring-green-600 px-4 mb-2 sm:mb-0 mr-2"
+                placeholder="name@company.com"
+                required
+              />
+                <button
+                  type="submit"
+                  class="bg-gray-200 border border-green-700 text-green-700 py-2 px-4 rounded-2xl hover:bg-green-600 hover:text-white transition mr-2 mt-2 "
+                >
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+      
+          <div
+            class="flex flex-col lg:flex-row justify-between items-center mt-10 border-t-2 pt-4"
+          >
+            <p class="mb-4 text-black lg:mb-0">
+              &copy; 2024 AgriSolutionsPakistan. All rights reserved.
+            </p>
+            <ul class="flex flex-wrap lg:flex-row text-bold mx-auto">
+              <li class="mb-2 lg:mb-0">
+                <a href="#" class="text-black hover:text-green-600 px-3"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li class="mb-2 lg:mb-0">
+                <a href="#" class="text-black hover:text-green-600 px-3"
+                  >Terms of Use</a
+                >
+              </li>
+              <li class="mb-2 lg:mb-0">
+                <a href="#" class="text-black hover:text-green-600 mr-4"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+            <ul class="social-icons flex flex-wrap lg:flex-row mt-4 lg:mt-0 text-2xl mr-20 ">
+                   <li class="mb-2 lg:mb-0">
+                <a href="#" class="facbook hover:text-facebook px-3">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="mb-2 lg:mb-0">
+                <a href="#" class="twitter hover:text-twitter px-3">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="mb-2 lg:mb-0">
+                <a href="#" class="instagram hover:text-instagram px-3">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li class="mb-2 lg:mb-0">
+                <a href="#" class="linkedin hover:text-linkedin px-3">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+              <li class="mb-2 lg:mb-0">
+                <a href="#" class="youtube hover:text-youtube px-3">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <script src="js/homepage.js"></script>
+  </body>
+</html>
